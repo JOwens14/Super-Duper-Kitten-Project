@@ -332,28 +332,8 @@ public class listViewController extends Main implements Initializable {
     @FXML
     void openUpdaterView(MouseEvent arg0) throws IOException {
         //((Node)(arg0.getSource())).getScene().getWindow().hide();
-//        changeScene("edithome.fxml", arg0);
+       changeHomeScene("edithome.fxml", arg0);
     	
-    	FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("edithome.fxml"));
-        loader.setControllerFactory(new Callback<Class<?>, Object>() {
-            @Override
-            public Object call(Class<?> aClass) {
-                return new editHomeController(myPersistentData.getMyHome());
-            }
-        });
-        
-        
-        
-        Stage stage = new Stage();
-        stage.setTitle("Home");
-        stage.getIcons().add(new Image("application/resources/constructlogo.png"));
-
-        Parent root = (Parent) loader.load();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
     }
 }
    

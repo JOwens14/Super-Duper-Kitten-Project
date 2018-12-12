@@ -19,6 +19,7 @@ import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.util.Callback;
 
 public class Main extends Application {
 
@@ -127,6 +128,43 @@ public class Main extends Application {
 	           }
 	       });
 	 	}
+	 	
+	 	public void changeHomeScene(String A, MouseEvent event) throws IOException {
+	 	    FXMLLoader loader = new FXMLLoader();
+	 	    loader.setLocation(getClass().getResource("edithome.fxml"));
+	        loader.setControllerFactory(new Callback<Class<?>, Object>() {
+	            @Override
+	            public Object call(Class<?> aClass) {
+	                return new editHomeController(myPersistentData.getMyHome());
+	            }
+	        });
+	        Parent newb = (Parent) loader.load();
+	        Scene newbScene = new Scene(newb);
+	        //This line gets the Stage information
+	        myStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	        //sets new scene
+	        myStage.setScene(newbScene);
+	        myStage.show();
+	        
+		      //grab your root here
+	        newbScene.setOnMousePressed(new EventHandler<MouseEvent>() {
+	           @Override
+	           public void handle(MouseEvent event) {
+	               xOffset = event.getSceneX();
+	               yOffset = event.getSceneY();
+	           }
+	       });
+
+	       //move around here
+	        newbScene.setOnMouseDragged(new EventHandler<MouseEvent>() {
+	           @Override
+	           public void handle(MouseEvent event) {
+	               myStage.setX(event.getScreenX() - xOffset);
+	               myStage.setY(event.getScreenY() - yOffset);
+	           }
+	       });
+	 	}
+	 	
 
 	 	/**
 	 	 * gets version
@@ -154,7 +192,9 @@ public class Main extends Application {
 //		    	myPersistentData.setMyHome(myMainHome);
 		    	myPersistentData = new ExportableDataAggregate();
 		    	myPersistentData.importJSON();
-		    	myMainHome = myPersistentData.getMyHome();
+		    	if (myMainHome == null) {
+		    		myMainHome = myPersistentData.getMyHome();
+		    	}
 //		    	overallConfig.initFromConfig(myPersistentData);//myMainHome, overallSettings);
 //		    	System.out.println(myMainHome == myPersistentData.getMyHome());
 //		    	System.out.println("my Main home is (after import): " + myMainHome);

@@ -146,7 +146,7 @@ public class editHomeController extends Main implements Initializable {
      */
     private double yOffset = 0;
     
-    private final Home myHome;
+    private Home myHome;
     
     public editHomeController(final Home theHome) {
     	myHome = theHome;
@@ -159,6 +159,8 @@ public class editHomeController extends Main implements Initializable {
 	 */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+    	
+    	
         System.out.println("initialize the following home: " + myHome);
         gasHeater.setSelected(myHome.isMyMainHeatGas());
         electricHeater.setSelected(myHome.isMyMainHeatElect());
