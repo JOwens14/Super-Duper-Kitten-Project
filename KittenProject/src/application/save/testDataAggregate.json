@@ -18,7 +18,7 @@
     "myLEDLight" : false,
     "myHalLight" : false,
     "myFlorLight" : false,
-    "mySolarPanel" : false,
+    "mySolarPanel" : true,
     "myWeatherProofedDoor" : false,
     "myNumWindow" : -2,
     "myNumWindowBad" : 0,

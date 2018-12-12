@@ -1,0 +1,45 @@
+{
+  "myHome" : {
+    "myElectricBill" : -74.5,
+    "myGasBill" : 0.0,
+    "myWaterBill" : 0.0,
+    "myMainHeatGas" : true,
+    "myMainHeatElect" : false,
+    "myMainHeatRadiant" : false,
+    "myFurnanceMultStage" : false,
+    "myHouseFan" : true,
+    "myProgThermostat" : false,
+    "myGasWaterHeater" : false,
+    "myElectWaterHeat" : false,
+    "myOnDemand" : false,
+    "myWaterHeaterAge" : 0,
+    "myTotalLight" : 0,
+    "myIncandLight" : false,
+    "myLEDLight" : false,
+    "myHalLight" : false,
+    "myFlorLight" : false,
+    "mySolarPanel" : false,
+    "myWeatherProofedDoor" : false,
+    "myNumWindow" : 700,
+    "myNumWindowBad" : 0,
+    "myNumWindowLowE" : 0,
+    "myInsulationWall" : false,
+    "myInsulationCeiling" : false,
+    "myInsulationFloor" : false,
+    "myIrrigation" : false,
+    "myIrrigationSensor" : false,
+    "myEStarRefrig" : false,
+    "myEStarDishWash" : false,
+    "myEStarClothWash" : false,
+    "myEStarDryer" : false
+  },
+  "mySettings" : {
+    "myName" : "Loki",
+    "myEmailAddress" : "hat@glove.com"
+  },
+  "myConfig" : {
+    "mySavePath" : "/C:/Users/Brian-VAIO/Documents/isaiAH_laptop/computerPrograming/UWT/TCSS-360/kitten_V2/KittenProject/bin/application/save",
+    "myHomePath" : "/C:/Users/Brian-VAIO/Documents/isaiAH_laptop/computerPrograming/UWT/TCSS-360/kitten_V2/KittenProject/bin/application/save/home.json",
+    "mySettingsPath" : "/C:/Users/Brian-VAIO/Documents/isaiAH_laptop/computerPrograming/UWT/TCSS-360/kitten_V2/KittenProject/bin/application/save/settings.json"
+  }
+}
