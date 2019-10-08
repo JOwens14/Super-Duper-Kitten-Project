@@ -1,2 +1,2 @@
-# Super-Duper-Kitten-Project
+# KC-Project
 A readme file! woohoo.
